@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles-1120.css" media="(min-width: 1120px)" />
+
+    <link
+      rel="stylesheet"
+      href="styles-768.css"
+      media="(min-width: 320px) and (max-width: 1120px)"
+    />
+
+    <link rel="stylesheet" href="styles-320.css" media="(max-width: 320px)" />
   </head>
-  <link rel="stylesheet" href="styles.css" />
+
   <body>
     <main class="main">
       <div class="header">Ремонт техники различных брендов</div>
@@ -140,5 +149,27 @@
       </button>
     </main>
   </body>
-  <script src="scripts.js"></script>
+  <script>
+    function loadScriptBasedOnWidth() {
+      const width = window.innerWidth;
+
+      if (width <= 320) {
+        const script = document.createElement("script");
+        script.src = "scripts-320.js";
+        document.body.appendChild(script);
+      } else if (width > 320 && width <= 768) {
+        const script = document.createElement("script");
+        script.src = "scripts-768.js";
+        document.body.appendChild(script);
+      } else {
+        const script = document.createElement("script");
+        script.src = "scripts-1120.js";
+        document.body.appendChild(script);
+      }
+    }
+
+    // Загружаем скрипт при изменении размера окна и при загрузке страницы
+    window.addEventListener("resize", loadScriptBasedOnWidth);
+    window.addEventListener("load", loadScriptBasedOnWidth);
+  </script>
 </html>
