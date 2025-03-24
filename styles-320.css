@@ -48,28 +48,39 @@ button:active {
   width: 100%;
   height: 56px;
   box-sizing: border-box;
-  padding: 16px 32px;
+  padding: 16px 16px;
   text-transform: uppercase;
   display: flex;
   align-items: center;
 }
 .slider {
   margin-top: 8px;
-  display: grid;
-  grid-template-columns: repeat(3, 224px);
-  column-gap: 32px;
-  row-gap: 16px;
-  padding-left: 32px;
+  display: flex;
+  overflow: scroll;
+  overflow-x: scroll;
+  padding-left: 16px;
+  gap: 16px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
 }
 .slider__item {
-  width: 240px;
+  min-width: 240px;
   height: 72px;
   padding-left: 16px;
   box-sizing: border-box;
   display: flex;
   border-radius: 6px;
+  background-color: #fff;
   overflow: hidden;
   border: 1px solid #eaeaea;
+}
+
+#more__item {
+  display: flex;
+  overflow: hidden;
+  gap: 16px;
 }
 .item__button {
   padding: 0px;
@@ -81,22 +92,7 @@ button:active {
 .item__go {
   margin-right: 16px;
 }
+
 .more__button {
-  display: flex;
-  align-items: center;
-  margin-left: 32px;
-  margin-top: 46px;
-}
-
-#more__item {
-  display: grid;
-  grid-template-columns: repeat(3, 224px);
-  grid-column: 1/4;
-  grid-row: 4/5;
-  column-gap: 32px;
-  row-gap: 16px;
-}
-
-#more__item.moreItem {
   display: none;
 }
