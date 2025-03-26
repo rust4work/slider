@@ -154,24 +154,6 @@
       </button>
     </main>
   </body>
-  <script>
-    function loadScriptBasedOnWidth() {
-      const width = window.innerWidth;
-
-      if (width <= 768) {
-        const script = document.createElement("script");
-        script.src = "scriptS-768.js";
-        document.body.appendChild(script);
-      } else {
-        const script = document.createElement("script");
-        script.src = "scripts-1120.js";
-        document.body.appendChild(script);
-      }
-    }
-
-    // Загружаем скрипт при изменении размера окна и при загрузке страницы
-    window.addEventListener("resize", loadScriptBasedOnWidth);
-    window.addEventListener("load", loadScriptBasedOnWidth);
-  </script>
+  <script src="scripts-1120.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>
