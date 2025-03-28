@@ -15,3 +15,12 @@ hideBtn.addEventListener("click", function () {
     iconLess.src = "pics/expand-.svg";
   }
 });
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

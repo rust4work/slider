@@ -100,3 +100,6 @@ button:active {
 #more__item.moreItem {
   display: none;
 }
+.mySwiper {
+  display: none !important;
+}
