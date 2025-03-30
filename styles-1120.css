@@ -71,6 +71,10 @@ button:active {
   overflow: hidden;
   border: 1px solid #eaeaea;
 }
+.eshe {
+  display: none;
+}
+
 .item__button {
   padding: 0px;
   width: 100%;

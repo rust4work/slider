@@ -1,19 +1,38 @@
-const hideBtn = document.querySelector("#hideBtn");
-const moreItem = document.querySelector("#more__item");
-const btnText = document.querySelector("#button__text");
-const iconLess = document.querySelector("#icon__less");
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("hideBtn");
+  const esheItems = document.querySelectorAll(".slider__item.eshe");
+  const buttonText = document.getElementById("button__text");
+  const icon = document.getElementById("icon__less");
 
-hideBtn.addEventListener("click", function () {
-  console.log("clicked");
-  moreItem.classList.toggle("moreItem");
+  esheItems.forEach((item) => {
+    if (item.style.display !== "grid" && item.style.display !== "none") {
+      item.style.display = "none";
+    }
+  });
 
-  if (moreItem.classList.contains("moreItem")) {
-    btnText.textContent = "Показать все";
-    iconLess.src = "pics/expand+.svg";
-  } else {
-    btnText.textContent = "Скрыть";
-    iconLess.src = "pics/expand-.svg";
-  }
+  button.addEventListener("click", function () {
+    if (esheItems.length > 0) {
+      const allHidden = Array.from(esheItems).every(
+        (item) => item.style.display === "none"
+      );
+
+      esheItems.forEach((item) => {
+        if (allHidden) {
+          item.style.display = "grid";
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+      if (allHidden) {
+        buttonText.textContent = "Скрыть";
+        icon.src = "pics/expand-.svg";
+      } else {
+        buttonText.textContent = "Показать все";
+        icon.src = "pics/expand+.svg";
+      }
+    }
+  });
 });
 
 var swiper = new Swiper(".mySwiper", {
