@@ -37,7 +37,7 @@ body {
 }
 button {
   border: none;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 button:active {
   background-color: rgba(0, 255, 255, 0.194);
@@ -72,7 +72,7 @@ button:active {
   box-sizing: border-box;
   display: flex;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: #fff !important;
   overflow: hidden;
   border: 1px solid #eaeaea;
 }
@@ -88,6 +88,7 @@ button:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
 }
 .item__go {
   margin-right: 16px;

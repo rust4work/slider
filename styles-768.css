@@ -64,12 +64,15 @@ button:active {
 .slider__item {
   width: 240px;
   height: 72px;
-  padding-left: 16px;
+
   box-sizing: border-box;
   display: flex;
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid #eaeaea;
+}
+.item__logo {
+  padding-left: 16px;
 }
 .item__button {
   padding: 0px;
@@ -77,6 +80,7 @@ button:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
 }
 .item__go {
   margin-right: 16px;

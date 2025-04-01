@@ -37,7 +37,7 @@ body {
 }
 button {
   border: none;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 button:active {
   background-color: rgba(0, 255, 255, 0.194);
@@ -64,7 +64,7 @@ button:active {
 .slider__item {
   width: 240px;
   height: 72px;
-  padding-left: 16px;
+
   box-sizing: border-box;
   display: flex;
   border-radius: 6px;
@@ -74,13 +74,16 @@ button:active {
 .eshe {
   display: none;
 }
-
+.item__logo {
+  padding-left: 16px;
+}
 .item__button {
   padding: 0px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
 }
 .item__go {
   margin-right: 16px;
